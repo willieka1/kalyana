@@ -1,0 +1,304 @@
+/* ============================================================
+   Kalyana — Dashboard typography & scale override
+   Load AFTER css/dashboard-kalyana-final.css.
+   Berlaku sama untuk role UMKM, Mahasiswa, dan Super Admin
+   (satu HTML dashboard, konten di-render per role).
+   ============================================================ */
+
+/* ---------- Font stack global ---------- */
+.dashboard-page,
+.dashboard-page button,
+.dashboard-page input,
+.dashboard-page select,
+.dashboard-page textarea {
+  font-family: "Plus Jakarta Sans", "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "ss01" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Angka Rupiah & tabel keuangan rata rapi */
+.k-stat__value,
+.finance-total b,
+.k-table td,
+.transaction-row strong,
+.k-donut span,
+.k-legend b {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "kern" 1, "liga" 1, "tnum" 1, "ss01" 1;
+}
+
+/* Semua heading pakai Plus Jakarta Sans (bukan Manrope lagi) */
+.dashboard-page h1,
+.dashboard-page h2,
+.dashboard-page h3,
+.header-title-block h1,
+.k-page-intro h2,
+.view-heading h2,
+.k-card__head h3,
+.panel-head h3,
+.k-stat__value,
+.finance-total b,
+.opportunity-card h3,
+.portfolio-dashboard article h3,
+.action-panel h3,
+.profile-avatar-large,
+.k-donut span,
+.footer-brand b,
+.logout-button {
+  font-family: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+  letter-spacing: -0.015em;
+}
+
+/* ---------- Sidebar ---------- */
+.app-sidebar nav button { font-size: 15px; font-weight: 600; min-height: 50px; }
+.app-sidebar nav button span:last-child { font-size: 15px; }
+.side-help b { font-size: 14px; }
+.side-help span { font-size: 12px; line-height: 1.6; }
+.side-help button { font-size: 12px; padding: 10px 12px; }
+.logout-button { font-size: 14px; min-height: 46px; letter-spacing: -0.005em; }
+
+/* ---------- Header topbar ---------- */
+/* Sembunyikan h1 di header supaya judul halaman tidak muncul 2x
+   (di topbar dan di dalam halaman). Breadcrumb tetap menunjukkan posisi. */
+.header-title-block h1 { display: none; }
+.header-title-block { min-width: 0; }
+.breadcrumb { font-size: 12px; margin-bottom: 0; }
+.breadcrumb svg { width: 16px; height: 16px; }
+.header-search input,
+.header-search input::placeholder { font-size: 14px; }
+.user-chip b { font-size: 13px; }
+.user-chip small { font-size: 11px; }
+.user-avatar { font-size: 13px; }
+
+/* ---------- Page intro / view heading ---------- */
+.k-page-intro h2,
+.view-heading h2 {
+  font-size: clamp(26px, 2.4vw, 32px);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+.k-page-intro p,
+.view-heading p { font-size: 14px; line-height: 1.6; }
+.view-heading > div > span { font-size: 11px; letter-spacing: 0.1em; }
+
+/* Tombol utama */
+.k-primary,
+.k-secondary,
+.primary-button { font-size: 13px; min-height: 44px; padding: 10px 16px; }
+
+/* ---------- Stat cards (semua role) ---------- */
+.k-stat { min-height: 124px; }
+.k-stat__label { font-size: 12px; font-weight: 600; }
+.k-stat__value {
+  font-size: clamp(22px, 1.9vw, 28px);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-top: 6px;
+}
+.k-stat__hint { font-size: 11px; }
+
+/* ---------- Card / panel headings ---------- */
+.k-card__head h3,
+.panel-head h3 { font-size: 16px; line-height: 1.35; }
+.k-card__head small,
+.panel-head small { font-size: 11px; }
+.k-link,
+.panel-head button { font-size: 12px; }
+
+/* ---------- Donut chart + legend (Super Admin & UMKM ringkasan) ---------- */
+.k-donut span { font-size: 32px; }
+.k-donut small { font-size: 12px; }
+.k-legend > div { font-size: 14px; }
+.k-legend b { font-size: 18px; }
+
+/* ---------- Activity feed ---------- */
+.k-activity-item b { font-size: 13px; }
+.k-activity-item small { font-size: 11px; line-height: 1.5; }
+.k-activity-item .time { font-size: 10px; }
+
+/* ---------- Admin flow (Super Admin) ---------- */
+.admin-flow button b { font-size: 13px; }
+.admin-flow button small { font-size: 10px; }
+.admin-flow-note { font-size: 11px; line-height: 1.6; }
+
+/* ---------- Tabel (Super Admin projects/transactions & UMKM projects) ---------- */
+.k-table th { font-size: 10px; letter-spacing: 0.08em; }
+.k-table td { font-size: 12px; }
+.k-table strong { font-size: 12px; }
+.k-table td small { font-size: 10px; margin-top: 3px; }
+.k-badge,
+.status-pill { font-size: 10px; min-height: 26px; padding: 5px 10px; }
+
+/* ---------- Project row (di panel workspace) ---------- */
+.project-row b { font-size: 13px; }
+.project-row small { font-size: 11px; }
+
+/* ---------- Form fields (project form UMKM, profil, dll.) ---------- */
+.dashboard-page label { font-size: 12px; }
+.dashboard-page input,
+.dashboard-page select,
+.dashboard-page textarea { font-size: 13px; padding: 11px 12px; }
+
+/* ---------- Halaman "Cari Mahasiswa" (UMKM) ---------- */
+.dashboard-search { height: 48px; padding: 0 13px; }
+.dashboard-search input,
+.dashboard-search input::placeholder { font-size: 14px; }
+.talent-result { min-height: 130px; padding: 16px; }
+.talent-avatar { font-size: 12px; width: 44px; height: 44px; }
+.talent-result b { font-size: 13px; }
+.talent-result small { font-size: 11px; margin-top: 3px; }
+.talent-result strong { font-size: 13px; margin-top: 9px; }
+.talent-result button,
+.opportunity-card button { font-size: 11px; padding: 8px 11px; }
+
+/* ---------- Halaman "Peluang Project" (Mahasiswa) ---------- */
+.opportunity-type { font-size: 11px; letter-spacing: 0.06em; }
+.opportunity-card h3 { font-size: 17px; line-height: 1.4; min-height: 48px; }
+.opportunity-card p { font-size: 11px; }
+.opportunity-card strong { font-size: 16px; }
+
+/* ---------- Halaman "Portofolio" (Mahasiswa) ---------- */
+.portfolio-dashboard article span { font-size: 10px; }
+.portfolio-dashboard article h3 { font-size: 15px; line-height: 1.4; }
+.portfolio-dashboard > button b { font-size: 32px; }
+.portfolio-dashboard > button span { font-size: 12px; }
+
+/* ---------- Halaman "Pembayaran / Pendapatan" ---------- */
+.finance-total span { font-size: 12px; }
+.finance-total b {
+  font-size: clamp(28px, 2.4vw, 34px);
+  letter-spacing: -0.025em;
+  margin: 10px 0 6px;
+}
+.finance-total small { font-size: 11px; }
+.transaction-row b { font-size: 13px; }
+.transaction-row small { font-size: 11px; }
+.transaction-row strong { font-size: 14px; }
+
+/* ---------- Halaman "Profil" ---------- */
+.profile-avatar-large {
+  width: 104px; height: 104px;
+  font-size: 28px;
+  font-weight: 700;
+}
+.action-panel .mini-label { font-size: 11px; letter-spacing: 0.09em; }
+.action-panel h3 { font-size: 20px; line-height: 1.4; }
+.action-panel p { font-size: 13px; }
+
+/* ---------- Empty state, loading, toast, form status ---------- */
+.empty-state { font-size: 12px; padding: 32px 20px; }
+.empty-state b { font-size: 13px; }
+.loading-card { font-size: 13px; }
+.loading-card b { font-size: 15px; }
+.form-status { font-size: 11px; min-height: 20px; }
+.dashboard-toast { font-size: 12px; padding: 12px 16px; }
+
+/* ---------- Footer ---------- */
+.footer-brand b { font-size: 13px; }
+.dashboard-footer p { font-size: 11px; line-height: 1.55; }
+.dashboard-footer small { font-size: 11px; }
+
+/* ============================================================
+   FIX layout kotak pencarian (bug lama, ke-override .dashboard-page label{display:grid})
+   Naikkan specificity dengan label.KELAS supaya menang atas .dashboard-page label.
+   ============================================================ */
+.dashboard-page label.header-search,
+.dashboard-page label.dashboard-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  grid-template-columns: none; /* buang grid warisan */
+}
+.dashboard-page label.header-search input,
+.dashboard-page label.dashboard-search input {
+  flex: 1 1 auto;
+  width: auto;
+  min-width: 0;
+  height: auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.dashboard-page label.header-search input:focus,
+.dashboard-page label.dashboard-search input:focus {
+  border: 0;
+  box-shadow: none;
+}
+.dashboard-page label.dashboard-search svg,
+.dashboard-page label.header-search svg { flex: 0 0 auto; color: #918a97; }
+
+/* ---------- Responsif: sedikit tuning agar tidak overflow di mobile ---------- */
+@media (max-width: 900px) {
+  .k-page-intro h2,
+  .view-heading h2 { font-size: clamp(22px, 4.5vw, 26px); }
+}
+@media (max-width: 640px) {
+  .app-sidebar nav button,
+  .app-sidebar nav button span:last-child { font-size: 14px; }
+  .k-stat__value { font-size: 22px; }
+  .finance-total b { font-size: 26px; }
+  .opportunity-card h3 { font-size: 16px; }
+  .k-table th { font-size: 10px; }
+  .k-table td { font-size: 12px; }
+}
+
+/* ============================================================
+   Enhanced Readability & Font Scale Override (Minimal 11px - 13px)
+   ============================================================ */
+.project-overview-copy b { font-size: 13px; }
+.project-overview-copy small { font-size: 11.5px; }
+.project-overview-progress strong { font-size: 12px; }
+.project-row b { font-size: 13.5px; }
+.project-row small { font-size: 12px; }
+.k-badge, .status-pill { font-size: 11px; min-height: 25px; padding: 5px 11px; }
+.project-stats .k-stat__hint { font-size: 11.5px; }
+.project-stats .k-stat__label { font-size: 13px; }
+.k-card__head small, .panel-head small { font-size: 11.5px; }
+.action-panel .mini-label { font-size: 11.5px; }
+.action-panel p { font-size: 13px; line-height: 1.6; }
+.side-help span { font-size: 12px; }
+.user-chip small { font-size: 11px; }
+
+/* ============================================================
+   Page Heading Font & Title Case Styling (Outfit Font)
+   ============================================================ */
+.view-heading h2,
+.k-page-intro h2,
+.header-title-block h1 {
+  font-family: "Outfit", "Plus Jakarta Sans", sans-serif !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+  text-transform: capitalize !important;
+}
+
+.view-heading > div > span {
+  font-family: "Outfit", "Plus Jakarta Sans", sans-serif !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.1em !important;
+}
+
+.k-card__head h3,
+.panel-head h3,
+.action-panel h3 {
+  font-family: "Outfit", "Plus Jakarta Sans", sans-serif !important;
+  font-weight: 700 !important;
+}
+
+/* Progress Track: Background Red (unfilled), Inner Fill Green (completed) */
+.overview-progress-track,
+.project-row-progress-track,
+.mini-progress {
+  background: #dc2626 !important; /* Latar belakang merah untuk sisa/0% progres */
+}
+
+.overview-progress-track i,
+.project-row-progress-track i,
+.mini-progress i {
+  background: #10b981 !important; /* Warna hijau untuk progres terisi */
+  background-image: none !important;
+  transition: width 0.35s ease;
+}
+

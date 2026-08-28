@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Dashboard Kalyana</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/dashboard-kalyana-final.css?v=7.2.0" />
+    <link rel="stylesheet" href="css/dashboard-typography.css?v=7.2.0" />
+    <link rel="stylesheet" href="css/dashboard-reference-v6.4.css?v=7.2.0" />
+    <link rel="stylesheet" href="css/help-whatsapp.css?v=7.2.0" />
+    <script defer src="scripts/dashboard.js?v=7.2.0"></script>
+    <script defer src="scripts/help-whatsapp.js?v=7.2.0"></script>
+  </head>
+  <body class="dashboard-page">
+    <aside class="app-sidebar">
+      <a href="index.html" class="dash-logo" aria-label="Kalyana"><img src="assets/images/kalyana-logo-final.png" alt="Kalyana" /></a>
+      <nav id="sideNav" aria-label="Menu dashboard"></nav>
+      <div class="side-help"><b>Pusat Bantuan</b><span>Hubungi tim Kalyana jika ada kendala penggunaan platform.</span><button type="button" data-help-open>Hubungi bantuan</button></div>
+      <button class="logout-button" id="logoutButton" type="button" title="Keluar">Keluar</button>
+    </aside>
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <main class="app-main">
+      <header class="app-header">
+        <button class="sidebar-toggle" id="sidebarToggle" type="button" aria-label="Buka menu dashboard"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" /></svg></button>
+        <div class="header-title-block">
+          <div class="breadcrumb"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5M5.5 10.5V20h13v-9.5M9.5 20v-6h5v6" /></svg><span>Workspace</span><span class="breadcrumb-separator">/</span><span id="breadcrumbText">Ringkasan</span></div>
+          <span id="welcomeText">Selamat datang kembali</span><h1 id="pageTitle">Ringkasan</h1>
+        </div>
+        <div class="header-actions">
+          <label class="header-search" aria-label="Pencarian"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5" /><path d="m16 16 4 4" /></svg><input id="headerSearchInput" type="search" placeholder="Cari di dashboard" autocomplete="off" /></label>
+          <button class="header-icon-btn notification" type="button" aria-label="Notifikasi"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4" /></svg></button>
+          <button class="header-icon-btn" type="button" id="profileQuickButton" aria-label="Buka profil"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5" /><path d="M5 20c.7-4 3.1-6 7-6s6.3 2 7 6" /></svg></button>
+          <div class="user-chip"><div class="user-avatar" id="userAvatar">K</div><div><b id="userName">Pengguna</b><small id="userRole">Kalyana</small></div></div>
+        </div>
+      </header>
+      <div id="dashboardContent"><section class="loading-card">Menyiapkan dashboard Anda...</section></div>
+      <footer class="dashboard-footer"><div class="footer-brand"><img src="assets/images/kalyana-logo-final.png" alt="Kalyana" /><div><b>Kalyana</b><p>Ruang kolaborasi UMKM dan mahasiswa untuk project kreatif yang terarah.</p></div></div><small>© 2026 Kalyana. Seluruh hak dilindungi.</small></footer>
+    </main>
+    <dialog class="help-dialog" id="helpDialog" aria-labelledby="helpDialogTitle">
+      <div class="help-dialog__content"><button class="help-dialog__close" type="button" data-help-close aria-label="Tutup bantuan">×</button><div class="help-dialog__icon" aria-hidden="true"><img src="assets/images/whatsapp-logo.png" alt="" /></div><h2 id="helpDialogTitle">Butuh bantuan?</h2><p>Tim Kalyana siap membantu kendala Anda melalui WhatsApp.</p><div class="help-dialog__message"><small>Pesan yang akan dikirim</small><span>Halo Admin Kalyana!<br />Tolong bantu saya ada kendala</span></div><div class="help-dialog__actions"><button class="help-dialog__cancel" type="button" data-help-close>Nanti saja</button><a class="help-dialog__whatsapp" href="https://api.whatsapp.com/send?phone=6281122334455&text=Halo%20Admin%20Kalyana%21%0ATolong%20bantu%20saya%20ada%20kendala" target="_blank" rel="noopener noreferrer">Buka WhatsApp</a></div></div>
+    </dialog>
+  </body>
+</html>

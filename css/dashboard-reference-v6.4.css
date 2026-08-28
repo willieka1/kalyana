@@ -1,0 +1,472 @@
+/* ============================================================
+   Kalyana v6.4.0 — pixel-oriented reference match
+   Target reference viewport: 1231 x 967.
+   This file is intentionally loaded last so the Project Saya /
+   Pekerjaan Saya screens follow the supplied visual reference.
+   ============================================================ */
+
+:root{
+  --sidebar-width:247px;
+  --dash-bg:#f8f7fa;
+  --dash-ink:#241b2a;
+  --dash-muted:#77717c;
+  --dash-line:#e5e1e8;
+  --dash-line2:#dcd6df;
+  --dash-purple:#60338c;
+  --dash-purple-dark:#4c286f;
+  --dash-purple-soft:#f2edf6;
+  --dash-radius:13px;
+  --dash-shadow:0 5px 18px rgba(50,36,58,.035);
+}
+
+.dashboard-page,
+.dashboard-page button,
+.dashboard-page input,
+.dashboard-page select,
+.dashboard-page textarea{
+  font-family:"Plus Jakarta Sans","Inter","Segoe UI",system-ui,-apple-system,sans-serif;
+}
+
+.dashboard-page{background:var(--dash-bg);color:var(--dash-ink)}
+
+/* Sidebar — reference uses a 247 px rail. */
+.app-sidebar{
+  width:247px;
+  padding:18px 15px 18px;
+  border-right:1px solid #e8e4ea;
+}
+.dash-logo{
+  height:113px;
+  margin:0 0 9px;
+  padding:2px 10px 12px;
+  border-bottom:1px solid #e7e3e9;
+}
+.dash-logo img{width:108px;height:108px}
+.app-sidebar nav{gap:4px;padding:10px 0}
+.app-sidebar nav button{
+  min-height:48px;
+  padding:8px 12px;
+  gap:10px;
+  border-radius:10px;
+  color:#69636e;
+  font-size:15px;
+  font-weight:600;
+}
+.app-sidebar nav button span:last-child{font-size:15px}
+.app-sidebar nav button.active{
+  background:#f3eef6;
+  border-color:#e7deec;
+  color:#513267;
+}
+.app-sidebar nav button.active:before{
+  left:-15px;
+  top:10px;
+  bottom:10px;
+  width:3px;
+  background:#5c2f86;
+}
+.nav-icon{width:29px;height:29px;flex-basis:29px;border-radius:7px}
+.nav-icon svg{width:17px;height:17px}
+.app-sidebar nav button.active .nav-icon{background:#eee6f3;color:#60338c}
+.side-help{
+  margin:auto 0 10px;
+  padding:13px 14px 12px;
+  gap:4px;
+  border-radius:11px;
+  background:#fbfafc;
+}
+.side-help b{font-size:13px}
+.side-help span{font-size:11px;line-height:1.55}
+.side-help button{margin-top:7px;padding:9px 10px;font-size:11px;border-radius:8px}
+.logout-button{min-height:45px;border-radius:10px;font-size:13px;background:#fffafa}
+
+/* Main + topbar */
+.app-main{margin-left:247px;padding:0 34px 26px}
+.app-header{
+  min-height:80px;
+  height:80px;
+  margin:0 -34px 22px;
+  padding:0 33px 0 34px;
+  gap:18px;
+  background:#fff;
+  border-bottom:1px solid #e7e3e9;
+  backdrop-filter:none;
+}
+.header-title-block{min-width:0;flex:1}
+.header-title-block h1,.header-title-block>span{display:none}
+.breadcrumb{margin:0;gap:6px;color:#8c8690;font-size:11px;line-height:1}
+.breadcrumb svg{width:15px;height:15px}
+.header-actions{height:42px;gap:8px}
+.dashboard-page label.header-search{
+  width:271px;
+  height:40px;
+  flex:0 0 271px;
+  padding:0 12px;
+  gap:9px;
+  border:1px solid #e5e1e8;
+  border-radius:10px;
+  background:#fbfafc;
+}
+.dashboard-page label.header-search svg{width:16px;height:16px}
+.dashboard-page label.header-search input,
+.dashboard-page label.header-search input::placeholder{font-size:12px}
+.header-icon-btn{width:40px;height:40px;border-radius:10px}
+.header-icon-btn svg{width:17px;height:17px}
+.user-chip{
+  min-width:170px;
+  height:44px;
+  padding:5px 10px 5px 6px;
+  gap:9px;
+  border-radius:10px;
+}
+.user-avatar{width:34px;height:34px;flex-basis:34px;border-radius:8px;font-size:12px}
+.user-chip b{font-size:12px;line-height:1.25}
+.user-chip small{font-size:10px;line-height:1.2}
+
+#dashboardContent{width:100%;max-width:none;margin:0}
+.view-heading{margin:0 0 17px;padding:0 1px;align-items:flex-start}
+.view-heading>div>span{margin-bottom:5px;font-size:11px;line-height:1.25;letter-spacing:.1em;color:#5d3484}
+.view-heading h2{
+  font-size:30px;
+  line-height:1.2;
+  letter-spacing:-.025em;
+  font-weight:700;
+}
+.view-heading p{margin:7px 0 0;font-size:13px;line-height:1.55;color:#77717c}
+
+/* Three summary cards */
+.k-stats.project-stats{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;
+  margin-bottom:16px;
+}
+.project-stats .k-stat{
+  min-height:119px;
+  padding:16px;
+  gap:12px;
+  border-color:#e3dfe6;
+  border-radius:13px;
+  box-shadow:0 5px 16px rgba(45,32,54,.035);
+}
+.project-stats .k-stat__icon{
+  width:37px;height:37px;flex-basis:37px;
+  border-radius:9px;
+  background:#f1ebf5;
+}
+.project-stats .k-stat__icon svg{width:18px;height:18px}
+.project-stats .k-stat__label{margin-top:0;font-size:12px;line-height:1.35;font-weight:600;color:#6f6875}
+.project-stats .k-stat__value{margin-top:4px;font-size:25px;line-height:1.16;font-weight:700;letter-spacing:-.025em}
+.project-stats .k-stat__hint{margin-top:5px;font-size:10px;line-height:1.35;color:#9a949d}
+.project-stat-native-progress{width:120px;height:5px;margin-top:9px}
+.project-stat-native-progress::-webkit-progress-bar{background:#ece9ee}
+.project-stat-native-progress::-webkit-progress-value{background:#60338c}
+.project-stat-native-progress::-moz-progress-bar{background:#60338c}
+
+/* Main graph card */
+.project-overview-card{
+  margin-bottom:18px;
+  border-color:#e3dfe6;
+  border-radius:13px;
+  box-shadow:0 5px 18px rgba(45,32,54,.035);
+}
+.project-overview-card .k-card__head{
+  min-height:67px;
+  padding:14px 17px 13px;
+  border-bottom:1px solid #ece8ee;
+}
+.project-overview-card .k-card__head h3{font-size:16px;line-height:1.35;font-weight:700}
+.project-overview-card .k-card__head small{margin-top:2px;font-size:10px;line-height:1.35}
+.project-overview-body{grid-template-columns:minmax(0,44%) minmax(0,56%);min-height:220px}
+.project-overview-summary{
+  padding:19px 16px 18px;
+  gap:26px;
+  border-right:0;
+  justify-content:center;
+}
+.project-status-donut,.dashboard-page .project-status-donut__svg{width:142px;height:142px}
+.project-status-donut__track{stroke:#e8e4ea;stroke-width:23}
+.project-status-donut__segment{stroke-width:23}
+.project-status-donut__segment--waiting{stroke:#caaa4e}
+.project-status-donut__segment--active{stroke:#6737b1}
+.project-status-donut__segment--completed{stroke:#59a174}
+.project-status-donut__center span{font-size:27px;line-height:1;font-weight:700}
+.project-status-donut__center small{margin-top:5px;font-size:10px}
+.project-status-legend{width:156px;gap:12px}
+.project-status-legend>div{gap:18px;font-size:13px;line-height:1.2}
+.project-status-legend>div>span{gap:8px}
+.project-status-legend b{font-size:15px}
+.k-dot{width:11px;height:11px;flex-basis:11px}
+.k-dot.waiting{background:#caaa4e}.k-dot.active{background:#6737b1}.k-dot.done{background:#59a174}
+.project-overview-list{padding:16px 20px 15px;gap:0;align-content:center}
+.project-overview-row{
+  min-height:42px;
+  padding:4px 0;
+  grid-template-columns:minmax(190px,1fr) minmax(180px,205px);
+  gap:22px;
+}
+.project-overview-copy b{font-size:12px;line-height:1.3;font-weight:700}
+.project-overview-copy small{margin-top:1px;font-size:9.5px;line-height:1.3}
+.project-overview-progress{grid-template-columns:minmax(95px,1fr) 39px;gap:10px}
+.project-overview-native-progress::-webkit-progress-value{background:#10b981}
+.project-overview-native-progress::-moz-progress-bar{background:#10b981}
+.project-overview-progress strong{font-size:10px;font-weight:700}
+
+/* Bottom 2-column workspace */
+.workspace-grid.project-workspace-grid{
+  grid-template-columns:minmax(0,1.93fr) minmax(286px,1fr);
+  gap:17px;
+  margin-bottom:18px;
+  align-items:start;
+}
+.project-list-panel,.project-form-panel,.action-panel{
+  padding:16px 17px 17px;
+  border-color:#e3dfe6;
+  border-radius:13px;
+  box-shadow:0 5px 18px rgba(45,32,54,.035);
+}
+.project-list-panel .panel-head,.project-form-panel .panel-head{
+  margin:0 0 11px;
+  padding:0 0 12px;
+  border-bottom:1px solid #ece8ee;
+}
+.project-list-panel .panel-head h3,.project-form-panel .panel-head h3{font-size:16px;line-height:1.35}
+.project-list-panel .panel-head small,.project-form-panel .panel-head small{margin-top:2px;font-size:10px;line-height:1.35}
+.project-row{
+  min-height:64px;
+  padding:9px 2px;
+  grid-template-columns:36px minmax(0,1fr) auto;
+  gap:11px;
+  border-bottom:1px solid #efebf0;
+}
+.project-icon{width:35px;height:35px;border-radius:8px;background:#f1ebf5}
+.project-icon svg{width:17px;height:17px}
+.project-row b{font-size:12px;line-height:1.25;font-weight:700}
+.project-row small{margin-top:1px;font-size:10px;line-height:1.25}
+.project-row-native-progress{height:4px;margin-top:6px}
+.project-row-native-progress::-webkit-progress-bar{background:#ebe9ed}
+.project-row-native-progress::-webkit-progress-value{background:#663590}
+.project-row-native-progress::-moz-progress-bar{background:#663590}
+.project-row-tail{gap:0;min-width:auto}
+.project-row-action{display:none}
+.status-pill{
+  min-width:66px;
+  min-height:25px;
+  padding:5px 10px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:999px;
+  font-size:9px;
+  line-height:1;
+  font-weight:700;
+}
+.status-pill.is-active{background:#f2edf6;color:#694584;border:1px solid #e3d7ea}
+.status-pill.is-waiting{background:#fbf6e7;color:#8f7627;border:1px solid #eee3bb}
+.status-pill.is-done{background:#edf6f0;color:#4d7e60;border:1px solid #d6e8dc}
+
+/* Right create-project form */
+.project-form-panel form{gap:11px}
+.dashboard-page .project-form-panel label{gap:5px;font-size:11px;line-height:1.25;color:#5b5560}
+.dashboard-page .project-form-panel input,
+.dashboard-page .project-form-panel select{
+  min-height:40px;
+  padding:9px 11px;
+  border-radius:9px;
+  font-size:12px;
+}
+.project-form-panel .field-grid{gap:9px}
+.project-form-panel .primary-button{min-height:40px;font-size:11px}
+
+/* Student reference side card: static appearance; editing opens a modal. */
+.action-panel{
+  padding:20px 17px 18px;
+  min-height:163px;
+}
+.action-panel .mini-label{font-size:10px;line-height:1.3;letter-spacing:.04em;text-transform:none;color:#785592}
+.action-panel h3{margin:7px 0 8px;font-size:20px;line-height:1.35;letter-spacing:-.02em}
+.action-panel p{font-size:12px;line-height:1.65;color:#5e5862}
+.action-panel .project-progress-form{display:none}
+
+/* Modal used for real progress editing without changing reference layout. */
+.project-progress-dialog{
+  width:min(430px,calc(100vw - 32px));
+  padding:0;
+  border:0;
+  border-radius:14px;
+  background:#fff;
+  color:var(--dash-ink);
+  box-shadow:0 24px 80px rgba(31,20,38,.22);
+}
+.project-progress-dialog::backdrop{background:rgba(34,25,40,.32);backdrop-filter:blur(2px)}
+.project-progress-dialog__body{padding:20px}
+.project-progress-dialog__head{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;margin-bottom:16px}
+.project-progress-dialog__head h3{margin:0;font-size:18px;line-height:1.3}
+.project-progress-dialog__head p{margin:4px 0 0;color:var(--dash-muted);font-size:11px;line-height:1.5}
+.project-progress-dialog__close{width:34px;height:34px;border:1px solid var(--dash-line);border-radius:9px;background:#fff;color:#746d79;font-size:20px;line-height:1}
+.project-progress-dialog form{display:grid;gap:12px}
+.project-progress-dialog label{gap:6px;font-size:11px}
+.project-progress-dialog input,.project-progress-dialog select{min-height:42px;font-size:12px}
+.project-progress-dialog .dialog-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:2px}
+.project-progress-dialog .dialog-cancel{min-height:40px;padding:9px 14px;border:1px solid var(--dash-line2);border-radius:9px;background:#fff;color:#655e69;font-size:11px;font-weight:700}
+
+/* Reference screenshot does not show footer in this viewport. Keep it lower and quiet. */
+.dashboard-footer{margin-top:24px}
+
+@media(max-width:1180px){
+  .dashboard-page label.header-search{width:230px;flex-basis:230px}
+  .user-chip{min-width:155px}
+}
+@media(max-width:980px){
+  :root{--sidebar-width:230px}
+  .app-sidebar{width:230px}
+  .app-main{margin-left:230px;padding-left:24px;padding-right:24px}
+  .app-header{margin-left:-24px;margin-right:-24px;padding-left:24px;padding-right:24px}
+}
+@media(max-width:760px){
+  .app-main{margin-left:0;padding:0 16px 22px}
+  .app-header{margin:0 -16px 18px;padding:0 16px;height:70px;min-height:70px}
+  .k-stats.project-stats{grid-template-columns:1fr}
+  .workspace-grid.project-workspace-grid{grid-template-columns:1fr}
+  .project-overview-body{grid-template-columns:1fr}
+  .project-overview-summary{border-bottom:1px solid #ece8ee}
+  .project-overview-row{grid-template-columns:1fr;gap:6px}
+}
+.project-row.is-interactive{cursor:pointer}
+.project-row.is-interactive:hover{background:#fcfbfd}
+.status-pill[data-start-project]{border:1px solid #eee3bb;background:#fbf6e7;color:#8f7627;box-shadow:none;font:700 9px/1 "Plus Jakarta Sans",sans-serif}
+.status-pill[data-start-project]:hover{background:#f8f0d8;transform:none}
+
+/* ============================================================
+   v6.4.0 — Reference-exact fixes for Project usaha & Pekerjaan saya
+   Ensures div-based progress bars match screenshot gradient exactly.
+   ============================================================ */
+
+/* Progress Track Container */
+.overview-progress-track,
+.project-row-progress-track {
+  height: 7px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #dc2626 !important; /* Latar belakang merah untuk sisa/0% progres */
+  flex: 1 1 auto;
+  min-width: 0;
+  position: relative;
+}
+
+.project-row-progress-track {
+  height: 5px;
+  margin-top: 6px;
+}
+
+.overview-progress-track i,
+.project-row-progress-track i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: #10b981 !important; /* Warna hijau untuk progres terisi */
+  background-image: none !important;
+  transition: width 0.35s ease;
+}
+
+/* Native Fallback Support */
+.project-row-native-progress::-webkit-progress-bar,
+.project-stat-native-progress::-webkit-progress-bar { background: #ece9ee; border-radius: 999px; }
+.project-row-native-progress::-webkit-progress-value,
+.project-stat-native-progress::-webkit-progress-value { background: #10b981; border-radius: 999px; }
+.project-row-native-progress::-moz-progress-bar,
+.project-stat-native-progress::-moz-progress-bar { background: #10b981; border-radius: 999px; }
+
+.project-stat-native-progress {
+  display: block;
+  width: min(150px, 100%);
+  height: 5px;
+  margin-top: 9px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #ece9ee;
+  border: 0;
+}
+
+/* Project overview body layout */
+.project-overview-body {
+  display: grid;
+  grid-template-columns: minmax(0, 44%) minmax(0, 56%);
+  min-height: 220px;
+}
+.project-overview-list {
+  padding: 16px 20px 15px;
+  display: grid;
+  align-content: center;
+  gap: 0;
+}
+.project-overview-row {
+  min-height: 42px;
+  padding: 4px 0;
+  display: grid;
+  grid-template-columns: minmax(190px, 1fr) minmax(180px, 205px);
+  align-items: center;
+  gap: 22px;
+  border-bottom: 1px solid #f4f1f6;
+}
+.project-overview-row:last-child { border-bottom: 0; }
+.project-overview-progress {
+  display: grid;
+  grid-template-columns: minmax(80px, 1fr) 38px;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+.project-overview-progress strong {
+  font-size: 11px;
+  font-weight: 700;
+  text-align: right;
+  white-space: nowrap;
+  color: var(--dash-ink, #241b2a);
+}
+
+.action-panel > p {
+  color: #5e5862;
+  font-size: 13px;
+  line-height: 1.65;
+  margin: 0;
+}
+.project-form-panel .panel-head {
+  margin: 0 0 14px;
+  padding: 0 0 13px;
+  border-bottom: 1px solid #ece8ee;
+}
+.project-form-panel .panel-head h3 { font-size: 15px; font-weight: 700; color: #241b2a; }
+.project-form-panel .panel-head small { font-size: 11px; color: #77717c; display: block; margin-top: 2px; }
+
+/* ============================================================
+   Cross-Device Responsive Layout Overrides
+   ============================================================ */
+html, body, .dashboard-page {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+.app-main, #dashboardContent, .k-card, .panel, .project-overview-card, .workspace-grid {
+  min-width: 0;
+  max-width: 100%;
+}
+
+@media (max-width: 1180px) {
+  .project-overview-body { grid-template-columns: 1fr; }
+  .project-overview-summary { border-right: 0; border-bottom: 1px solid #ece8ee; }
+  .project-overview-row { grid-template-columns: minmax(140px, 1fr) minmax(130px, 180px); gap: 14px; }
+}
+@media (max-width: 760px) {
+  .project-overview-row { grid-template-columns: 1fr !important; gap: 8px; padding: 8px 0; border-bottom: 1px solid #f4f1f6; }
+  .project-overview-progress { grid-template-columns: minmax(80px, 1fr) 42px; }
+  .workspace-grid.project-workspace-grid { grid-template-columns: 1fr !important; }
+}
+
+/* Global Font Quality & Anti-aliasing */
+.dashboard-page,
+.dashboard-page * {
+  font-family: "Plus Jakarta Sans", "DM Sans", "Inter", -apple-system, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+

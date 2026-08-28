@@ -1,0 +1,30 @@
+module.exports = {
+  talents: [
+    {id:'tal_akila',userId:'usr_demo_talent',name:'Akila Amelia',category:'design',role:'Graphic Designer',city:'Malang',rating:4.9,reviews:38,price:450000,initials:'AA',portfolio:'Visual identity, social media design',verified:true},
+    {id:'tal_raka',name:'Raka Herlambang',category:'video',role:'Video Editor',city:'Bandung',rating:4.8,reviews:26,price:600000,initials:'RH',portfolio:'Motion & reels',verified:true},
+    {id:'tal_nadia',name:'Nadia Hanifah',category:'copy',role:'Copywriter',city:'Surabaya',rating:5,reviews:21,price:350000,initials:'NH',portfolio:'Brand storytelling',verified:true},
+    {id:'tal_dewi',name:'Dewi Wulandari',category:'design',role:'Brand Designer',city:'Jakarta',rating:4.9,reviews:31,price:500000,initials:'DW',portfolio:'Packaging design',verified:true}
+  ],
+  users: [
+    {id:'usr_demo_umkm',name:'Sari Rasa',email:'umkm@kalyana.test',role:'umkm',password:'demo123',profile:{businessName:'Sari Rasa',businessCategory:'Kuliner',detail:'Sari Rasa',bio:'UMKM kuliner yang mengembangkan identitas dan pemasaran digital.'}},
+    {id:'usr_demo_talent',name:'Akila Amelia',email:'talent@kalyana.test',role:'talent',password:'demo123',profile:{campus:'Universitas Negeri Malang',studyProgram:'Desain Komunikasi Visual',detail:'Desain Komunikasi Visual',skill:'Graphic Design',bio:'Mahasiswa DKV yang fokus pada branding, visual identity, dan konten digital.'}},
+    {id:'usr_super_admin',name:'Super Admin',email:'admin@kalyana.test',role:'super_admin',password:'admin234',profile:{}}
+  ],
+  projects: [
+    {id:'prj_logo_fashion',ownerId:'usr_demo_umkm',title:'Logo Toko Fashion',service:'Desain Grafis',talentId:'tal_akila',budget:650000,status:'completed',progress:100,deadline:'2026-08-24',paymentStatus:'paid',paidAt:'2026-08-24T10:30:00.000Z',createdAt:'2026-08-06T08:00:00.000Z',updatedAt:'2026-08-24T10:30:00.000Z'},
+    {id:'prj_sari_rasa',ownerId:'usr_demo_umkm',title:'Identitas Visual Sari Rasa',service:'Desain Grafis',talentId:'tal_akila',budget:1800000,status:'active',progress:75,deadline:'2026-09-12',paymentStatus:'unpaid',createdAt:'2026-08-10T08:00:00.000Z',updatedAt:'2026-08-28T08:00:00.000Z'},
+    {id:'prj_video_kopi',ownerId:'usr_demo_umkm',title:'Video Reels Produk Kopi',service:'Video Editing',talentId:'tal_akila',budget:1200000,status:'active',progress:45,deadline:'2026-09-08',paymentStatus:'unpaid',createdAt:'2026-08-14T08:00:00.000Z',updatedAt:'2026-08-27T08:00:00.000Z'},
+    {id:'prj_katalog_kuliner',ownerId:'usr_demo_umkm',title:'Katalog Menu Kuliner',service:'Copywriting',talentId:'tal_akila',budget:650000,status:'draft',progress:10,deadline:'2026-09-18',paymentStatus:'unpaid',createdAt:'2026-08-18T08:00:00.000Z',updatedAt:'2026-08-26T08:00:00.000Z'}
+  ],
+  opportunities: [
+    {id:'opp_1',title:'Paket Konten Kedai Kopi',service:'Desain Grafis',budget:900000,deadline:'7 hari',ownerName:'Kopi Temu',description:'Membuat 8 desain feed dan 4 story untuk promo bulanan.',status:'open'},
+    {id:'opp_2',title:'Video Reels Produk Fashion',service:'Video Editing',budget:1250000,deadline:'10 hari',ownerName:'Laras Wear',description:'Editing 6 video reels vertikal dari footage yang disediakan UMKM.',status:'open'},
+    {id:'opp_3',title:'Copywriting Katalog Kuliner',service:'Copywriting',budget:650000,deadline:'5 hari',ownerName:'Dapur Nusa',description:'Menulis deskripsi 24 menu dan headline katalog digital.',status:'open'}
+  ],
+  applications: [],
+  portfolio: [
+    {id:'port_akila_1',userId:'usr_demo_talent',title:'Riset dan arah visual UMKM',category:'Brand Strategy',description:'Riset visual, moodboard, dan arah identitas untuk UMKM.',image:'assets/images/kalyana-creative-process.png',createdAt:'2026-07-21T08:00:00.000Z'},
+    {id:'port_akila_2',userId:'usr_demo_talent',title:'Perencanaan konten digital',category:'Content Planning',description:'Perencanaan kalender konten dan sistem visual sosial media.',image:'assets/images/kalyana-collaboration.png',createdAt:'2026-07-28T08:00:00.000Z'}
+  ],
+  registrations: []
+};
