@@ -1,1 +1,335 @@
-<!doctype html><html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Akun Kalyana</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/auth-kalyana-final.css?v=6.0.0"><script defer src="scripts/auth.js?v=6.0.0"></script></head><body class="auth-page"><main class="auth-shell"><section class="auth-visual"><a href="index.html" class="auth-logo"><img src="assets/images/kalyana-logo-final.png" alt="Kalyana"></a><div class="auth-copy"><span>Kolaborasi yang berdampak</span><h1>Satu akun untuk mulai bertumbuh bersama.</h1><p>UMKM menemukan talenta kreatif. Mahasiswa mendapatkan project dan pengalaman nyata.</p></div><div class="auth-role-preview"><article><b>Untuk UMKM</b><span>Kelola brief, pilih talent, pantau project, dan pembayaran.</span></article><article><b>Untuk Talent Mahasiswa</b><span>Temukan peluang, kelola pekerjaan, portofolio, dan pendapatan.</span></article></div></section><section class="auth-panel"><div class="auth-panel-inner"><a href="index.html" class="back-link">← Kembali ke beranda</a><div class="auth-tabs"><button class="active" data-view="register">Buat Akun</button><button data-view="login">Masuk</button></div><div id="registerView"><span class="mini-label">Daftar gratis</span><h2>Buat akun Kalyana</h2><p class="muted">Pilih peran yang sesuai. Dashboard Anda akan disiapkan secara otomatis.</p><div class="role-picker"><button class="active" data-role="umkm"><i>▦</i><b>UMKM</b><span>Saya mencari talent</span></button><button data-role="talent"><i>✦</i><b>Talent Mahasiswa</b><span>Saya mencari project</span></button></div><form id="registerForm"><div class="field-grid"><label>Nama lengkap<input name="name" required placeholder="Nama Anda"></label><label>Email<input name="email" type="email" required placeholder="nama@email.com"></label></div><label id="organizationLabel">Nama usaha<input name="organization" required placeholder="Contoh: Sari Rasa"></label><div class="talent-only" hidden><label>Program studi<input name="study" placeholder="Contoh: DKV"></label></div><label id="categoryLabel">Kategori usaha<select name="category"><option>Makanan & Minuman</option><option>Fashion</option><option>Retail</option><option>Jasa</option></select></label><label>Kata sandi<input name="password" type="password" minlength="6" required placeholder="Minimal 6 karakter"></label><input type="hidden" name="role" value="umkm"><button class="primary-button" type="submit">Buat Akun UMKM →</button><p class="form-status" role="status"></p></form></div><div id="loginView" hidden><span class="mini-label">Selamat datang kembali</span><h2>Masuk ke Kalyana</h2><p class="muted">Gunakan akun UMKM, Talent Mahasiswa, atau Super Admin Anda.</p><form id="loginForm"><label>Email<input name="email" type="email" required placeholder="nama@email.com"></label><label>Kata sandi<input name="password" type="password" required placeholder="Kata sandi"></label><button class="primary-button" type="submit">Masuk ke Dashboard →</button><p class="form-status" role="status"></p></form><div class="demo-accounts"><b>Akun demo</b><button data-demo="umkm">UMKM: umkm@kalyana.test</button><button data-demo="talent">Talent: talent@kalyana.test</button><button data-demo="admin">Super Admin: admin@kalyana.test</button><small>Kata sandi demo: demo123 · Super Admin: admin234</small></div></div></div></section></main></body></html>
+```html
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Akun Kalyana</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/auth-kalyana-final.css?v=6.0.0"
+    >
+
+    <script
+        defer
+        src="scripts/auth.js?v=6.0.0"
+    ></script>
+</head>
+
+<body class="auth-page">
+
+    <main class="auth-shell">
+
+        <!-- ==================== AUTH VISUAL ==================== -->
+        <section class="auth-visual">
+
+            <a href="index.html" class="auth-logo">
+                <img
+                    src="assets/images/kalyana-logo-final.png"
+                    alt="Kalyana"
+                >
+            </a>
+
+            <div class="auth-copy">
+                <span>Kolaborasi yang berdampak</span>
+
+                <h1>
+                    Satu akun untuk mulai bertumbuh bersama.
+                </h1>
+
+                <p>
+                    UMKM menemukan talenta kreatif. Mahasiswa mendapatkan
+                    project dan pengalaman nyata.
+                </p>
+            </div>
+
+            <div class="auth-role-preview">
+
+                <article>
+                    <b>Untuk UMKM</b>
+                    <span>
+                        Kelola brief, pilih talent, pantau project, dan pembayaran.
+                    </span>
+                </article>
+
+                <article>
+                    <b>Untuk Talent Mahasiswa</b>
+                    <span>
+                        Temukan peluang, kelola pekerjaan, portofolio, dan pendapatan.
+                    </span>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- ==================== AUTH PANEL ==================== -->
+        <section class="auth-panel">
+
+            <div class="auth-panel-inner">
+
+                <a href="index.html" class="back-link">
+                    ← Kembali ke beranda
+                </a>
+
+
+                <!-- ==================== AUTH TABS ==================== -->
+                <div class="auth-tabs">
+                    <button
+                        class="active"
+                        data-view="register"
+                    >
+                        Buat Akun
+                    </button>
+
+                    <button data-view="login">
+                        Masuk
+                    </button>
+                </div>
+
+
+                <!-- ==================== REGISTER VIEW ==================== -->
+                <div id="registerView">
+
+                    <span class="mini-label">
+                        Daftar gratis
+                    </span>
+
+                    <h2>
+                        Buat akun Kalyana
+                    </h2>
+
+                    <p class="muted">
+                        Pilih peran yang sesuai. Dashboard Anda akan disiapkan
+                        secara otomatis.
+                    </p>
+
+
+                    <!-- Role Picker -->
+                    <div class="role-picker">
+
+                        <button
+                            class="active"
+                            data-role="umkm"
+                        >
+                            <i>▦</i>
+                            <b>UMKM</b>
+                            <span>Saya mencari talent</span>
+                        </button>
+
+                        <button data-role="talent">
+                            <i>✦</i>
+                            <b>Talent Mahasiswa</b>
+                            <span>Saya mencari project</span>
+                        </button>
+
+                    </div>
+
+
+                    <!-- Register Form -->
+                    <form id="registerForm">
+
+                        <div class="field-grid">
+
+                            <label>
+                                Nama lengkap
+
+                                <input
+                                    name="name"
+                                    required
+                                    placeholder="Nama Anda"
+                                >
+                            </label>
+
+                            <label>
+                                Email
+
+                                <input
+                                    name="email"
+                                    type="email"
+                                    required
+                                    placeholder="nama@email.com"
+                                >
+                            </label>
+
+                        </div>
+
+
+                        <label id="organizationLabel">
+                            Nama usaha
+
+                            <input
+                                name="organization"
+                                required
+                                placeholder="Contoh: Sari Rasa"
+                            >
+                        </label>
+
+
+                        <div class="talent-only" hidden>
+
+                            <label>
+                                Program studi
+
+                                <input
+                                    name="study"
+                                    placeholder="Contoh: DKV"
+                                >
+                            </label>
+
+                        </div>
+
+
+                        <label id="categoryLabel">
+                            Kategori usaha
+
+                            <select name="category">
+                                <option>Makanan & Minuman</option>
+                                <option>Fashion</option>
+                                <option>Retail</option>
+                                <option>Jasa</option>
+                            </select>
+                        </label>
+
+
+                        <label>
+                            Kata sandi
+
+                            <input
+                                name="password"
+                                type="password"
+                                minlength="6"
+                                required
+                                placeholder="Minimal 6 karakter"
+                            >
+                        </label>
+
+
+                        <input
+                            type="hidden"
+                            name="role"
+                            value="umkm"
+                        >
+
+
+                        <button
+                            class="primary-button"
+                            type="submit"
+                        >
+                            Buat Akun UMKM →
+                        </button>
+
+                        <p
+                            class="form-status"
+                            role="status"
+                        ></p>
+
+                    </form>
+
+                </div>
+
+
+                <!-- ==================== LOGIN VIEW ==================== -->
+                <div id="loginView" hidden>
+
+                    <span class="mini-label">
+                        Selamat datang kembali
+                    </span>
+
+                    <h2>
+                        Masuk ke Kalyana
+                    </h2>
+
+                    <p class="muted">
+                        Gunakan akun UMKM, Talent Mahasiswa, atau Super Admin Anda.
+                    </p>
+
+
+                    <!-- Login Form -->
+                    <form id="loginForm">
+
+                        <label>
+                            Email
+
+                            <input
+                                name="email"
+                                type="email"
+                                required
+                                placeholder="nama@email.com"
+                            >
+                        </label>
+
+
+                        <label>
+                            Kata sandi
+
+                            <input
+                                name="password"
+                                type="password"
+                                required
+                                placeholder="Kata sandi"
+                            >
+                        </label>
+
+
+                        <button
+                            class="primary-button"
+                            type="submit"
+                        >
+                            Masuk ke Dashboard →
+                        </button>
+
+                        <p
+                            class="form-status"
+                            role="status"
+                        ></p>
+
+                    </form>
+
+
+                    <!-- Demo Accounts -->
+                    <div class="demo-accounts">
+
+                        <b>Akun demo</b>
+
+                        <button data-demo="umkm">
+                            UMKM: umkm@kalyana.test
+                        </button>
+
+                        <button data-demo="talent">
+                            Talent: talent@kalyana.test
+                        </button>
+
+                        <button data-demo="admin">
+                            Super Admin: admin@kalyana.test
+                        </button>
+
+                        <small>
+                            Kata sandi demo: demo123 · Super Admin: admin234
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
+```
